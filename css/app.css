@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/bright_squares.png'); /* Background pattern from Subtle Patterns */
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 1500;
+    color: black;
+    padding-top: 20px;
+    font-size: 55px;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: white;
+    padding: 32px;
+    border: black solid 8px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background-image: url('./background.png');
+    font-size: 0;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    cursor: default;
+    background: #3a00ff;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    font-size: 33px;
+    background: #ffdb00;
+    
+}
+.deck .card.right {
+    background: #ffdb00;
+    transform:rotate(1080deg); 
+    transition:transform 2s ease-in-out;
+}
+.deck .card.wrong {
+    animation: shake 0.5s; 
+    background-color: red;
+}
+@keyframes shake {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -4px) rotate(-7deg); }
+    20% { transform: translate(-5px, 2px) rotate(7deg); }
+    30% { transform: translate(5px, 4px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(7deg); }
+    50% { transform: translate(-2px, 4px) rotate(-7deg); }
+    60% { transform: translate(-5px, 2px) rotate(0deg); }
+    70% { transform: translate(5px, 2px) rotate(-7deg); }
+    80% { transform: translate(-2px, -2px) rotate(7deg); }
+    90% { transform: translate(2px, 4px) rotate(0deg); }
+    100% { transform: translate(2px, -4px) rotate(-7deg); }
+}
+.blocked {
+    pointer-events: none;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+.score-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    color: black;
+    font-size: 28px;
+    
+}
+.score-panel .after {
+    color: #bababa;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+    width: 30px;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+span, time {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
+time {
+    padding: 50px;
+}
+
+/*Congratulations message*/
+.alert {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    position:fixed;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40%;
+    height: 300px;
+    background: url('../img/bright_squares.png');
+    text-align: center;
+    border: 4px solid black;
+}
+.results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.messages>h2 {
+    font-size: 40px;
+}
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.one, .two {
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    border: 2px solid black;
+    transition: transform 0.05s ease-in-out;
+}
+:hover.one {
+    transform: scale(1.3);
+}
+:hover.two {
+   transform: scale(1.3); 
+}
+
+
