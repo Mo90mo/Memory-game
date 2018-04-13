@@ -20,7 +20,7 @@ I changed the CSS to add some styling.
 
 I added interactivity using pure Javascript: 
 - I created a deck of cards that shuffles every time the page is loaded or refreshed.
-- I created functions to display the front of the card, to display match and unmatch cards.
+- I created functions to display the front of the card, to display matched and unmatched cards.
 - I created a timer which starts every time the player starts the game.
 - I created a moves counter.
 - I created a pop up window which appears at the end of the game reporting the total moves and time needed to end the game and asking if the player want to play again.

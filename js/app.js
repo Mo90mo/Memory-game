@@ -44,7 +44,6 @@ function startGame() {
 //Make the cards flip when clicked
 let displayCard = function (event) {
 	if (event.target.className === 'card') {
-	// if (event.target.tagName === 'LI') {
 		event.target.classList.add('open');
 		event.target.classList.add('show');
 		event.target.classList.add('blocked');
@@ -84,8 +83,8 @@ function control () {
 function rotate() {
 	flippedCards[0].classList.add('right');
 	flippedCards[1].classList.add('right');
-
 }
+
 //Declare the match function
 function match() {
 	flippedCards[0].classList.add('match');
@@ -102,7 +101,6 @@ function match() {
 function remove() {
 		deck.removeEventListener('click', displayCard);
 }
-
 
 //Make the cards wiggle when they're unmatched
 function wiggle () {
@@ -121,9 +119,9 @@ function unmatch() {
 /*
 Create the winner message:
 -creating the variables to store the message value and the buttons
--creating a function to chenge the message to display moves and time
+-creating a function to change the displayed moves and time
 -creating a function to display the message
--creating two events in case of clicking one button or the other
+-creating two events in case of clicking the 'yes' or the 'no' button 
 */
 
 const button1 = document.querySelector('.one');
@@ -150,13 +148,13 @@ button2.addEventListener('click', function() {
 	return message.style.display = 'none';
 });
 
-//stars
+//Create a function to change the number of stars showed
 function score() {
-	if (counter.innerHTML>8 && counter.innerHTML<16) {
+	if (counter.innerHTML>10 && counter.innerHTML<16) {
 		star3.classList.add('after');
-	} else if (counter.innerHTML>16 && counter.innerHTML<20) {
+	} else if (counter.innerHTML>16 && counter.innerHTML<22) {
 		star2.classList.add('after');
-	} else if (counter.innerHTML>20){
+	} else if (counter.innerHTML>22){
 		star1.classList.add('after')
 	}
 }
