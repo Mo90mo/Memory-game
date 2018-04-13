@@ -20,7 +20,7 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/bright_squares.png'); /* Background pattern from Subtle Patterns */
+    background: url('./img/bright_squares.png'); 
 
 }
 
@@ -60,7 +60,7 @@ h1 {
 .deck .card {
     height: 125px;
     width: 125px;
-    background-image: url('./background.png');
+    background-image: url('./img/background.png');
     font-size: 0;
     color: #ffffff;
     cursor: pointer;
@@ -166,7 +166,7 @@ time {
     transform: translateY(-50%);
     width: 40%;
     height: 300px;
-    background: url('../img/bright_squares.png');
+    background: url('./img/bright_squares.png');
     text-align: center;
     border: 4px solid black;
 }
