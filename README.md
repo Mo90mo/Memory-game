@@ -12,6 +12,8 @@ This is a simple matching game in which the player must match all the 8 pairs of
 
 Simply click on the cards to show the front. Keep playing until all the cards' fronts are displayed.
 
+You can see a demo at: https://matching-card-game.netlify.com/
+
 ## What I've done
 
 The starter project had some HTML and CSS styling to display a static version of the Memory Game project. The starter project used Bootsrap to build the deck.
